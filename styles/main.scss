@@ -1,0 +1,27 @@
+// Utils
+@import './utils/variables';
+
+// Base
+@import './base/reset';
+@import './base/typographie';
+
+// Animations
+@import './animations/slideDown';
+
+// Components
+@import './components/sectionTop';
+@import './components/mid';
+@import './components/cardProject';
+@import './components/portfolio';
+@import './components/prestation';
+@import './components/contact';
+@import './components/graph';
+
+// Layout
+@import './layout/buttons';
+@import './layout/footer';
+@import './layout/header';
+
+// Pages 
+@import './pages/home';
+@import './pages/mentions_legales';
