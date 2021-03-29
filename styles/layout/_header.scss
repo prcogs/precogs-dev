@@ -8,7 +8,7 @@ header {
    display: grid;
    grid-template-columns: auto 29rem;
    width: 100vw;
-   max-width: 1440px;
+   // max-width: 1440px;
    z-index: 5;
 
    margin: 0 auto;
@@ -70,7 +70,5 @@ header {
      background-color: rgba($color: $secondary-color, $alpha: 0);
      transition: all 200ms ease-in-out;
      line-height: 4rem;
-
    }
-
 }

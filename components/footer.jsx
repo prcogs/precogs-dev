@@ -1,17 +1,18 @@
 import Link from 'next/link'
 
 const Footer = () => {
+
    return (
       <footer>
          <div className="reseaux">
             <strong title="Linkedin - Florian Fort"> 
-                  <a target="_blank" href="https://stackoverflow.com/">
+                  <a target="_blank" href="https://linkedin.com/in/florian-fort-9537421b9">
                      <img src="/images/linkedin_color.svg"   alt="Logo linkedin"/>
                   </a> 
             </strong>
 
             <strong title="GitHub - Prcogs"> 
-                  <a target="_blank" href="https://stackoverflow.com/">
+                  <a target="_blank" href="https://github.com/prcogs">
                      <img src="/images/github_color.svg"     alt="Logo github"/>
                   </a> 
             </strong>
@@ -27,9 +28,11 @@ const Footer = () => {
             </strong>
          </div>
 
-         <p>2021 © Florian Fort - Yvelines, FRANCE - SIRET <br/>
-                        n°79439712500012<br/>
-            <i><Link href="/mentions_legales">Mentions légales</Link> </i> - <i>Conditions générales de vente</i>
+         <p>{new Date().getFullYear()} © Florian Fort - Yvelines, FRANCE <br/>
+         {/* - SIRET <br/>
+                        n°79439712500012<br/> */}
+            <i><Link href="/mentions_legales">Mentions légales</Link> </i>
+             {/* - <i>Conditions générales de vente</i> */}
          </p>
 
       </footer>
@@ -39,7 +42,7 @@ const Footer = () => {
 
 const copyEmail = () => {
    navigator.clipboard.writeText("prcogs.contact@gmail.com")
-   alert("Email copier dans la presse-papier.")   
+   alert("Email (prcogs.contact@gmail.com) copier dans le presse-papier.")   
 }
 
 export default Footer

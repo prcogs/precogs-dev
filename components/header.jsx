@@ -2,18 +2,13 @@ import { useEffect, useState } from "react";
 
 
 
-const Header = ({ position, height }) => {
-   const [offset, setOffset] = useState(0);
+const Header = ({ position, height, offset }) => {
    const [classHeader, setClassHeader] = useState("top");
    const [active, setActive] = useState("accueil")
 
    const tierScreen = (1/3 * height)
 
    useEffect(() => {
-      window.onscroll = () => {
-         setOffset(window.pageYOffset)
-      }
-
       if(offset > 60) {
          setClassHeader("scroll slideDown")
       } else {
@@ -32,9 +27,8 @@ const Header = ({ position, height }) => {
    } else {
       setActive("accueil")
    }
-  },[offset])
 
-//   console.log(offset, tierScreen)
+  },[offset])
 
 
    return (

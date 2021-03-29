@@ -63,4 +63,19 @@
    img {
       vertical-align: sub;
    }
+
+   &:disabled {
+      cursor: not-allowed;
+
+      &:active,
+      &:hover {
+         &::before {
+            opacity: 0;
+         }
+   
+         &::after {
+            opacity: 0;
+         }
+      }
+   }
 }

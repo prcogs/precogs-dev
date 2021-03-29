@@ -1,0 +1,13 @@
+
+
+@keyframes wrapperStacks_open {
+   0% { height: 0rem;}
+}
+
+@keyframes containerStacks_open-close {
+   0% { transform: translateY(-100%);}
+}
+
+@keyframes wrapperStacks_close {
+   0% { height: 0rem;}
+}

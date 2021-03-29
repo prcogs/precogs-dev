@@ -1,5 +1,6 @@
 // Utils
 @import './utils/variables';
+@import './utils/mixins';
 
 // Base
 @import './base/reset';
@@ -7,6 +8,8 @@
 
 // Animations
 @import './animations/slideDown';
+@import './animations/openInfoGraph';
+@import './animations/openWrapperStacks';
 
 // Components
 @import './components/sectionTop';
@@ -15,12 +18,14 @@
 @import './components/portfolio';
 @import './components/prestation';
 @import './components/contact';
-@import './components/graph';
+@import './components/infograph';
+@import './components/wrapperStacks';
 
 // Layout
 @import './layout/buttons';
 @import './layout/footer';
 @import './layout/header';
+@import './layout/modal';
 
 // Pages 
 @import './pages/home';

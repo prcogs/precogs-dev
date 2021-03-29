@@ -1,0 +1,120 @@
+
+
+
+@mixin position-round-line($positon, $nbr) {
+   
+   .line#{$nbr} {
+      top:$positon + 8px;
+   }
+
+   .round#{$nbr} {
+      top:$positon;
+   }
+   
+}
+
+@mixin button($name, $color) {
+   .btn--#{$name} {
+      position: relative;
+      z-index: 1;
+      // min-width: 8rem;
+   
+      background-color: $color;
+      border-radius: 5px;
+      color: $tertiary-color;
+      line-height: 2;
+      padding-left: 10px;
+      padding-right: 10px;
+   
+      &:hover {
+         &::after {
+            opacity: 1;
+         }
+      }
+   
+      &:active {
+         &::before {
+            opacity: 1;
+         }
+   
+         &::after {
+            opacity: 0;
+         }
+      }
+   
+      &::after {
+         content: "";
+         position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 0;  
+         left: 0;
+         z-index: -1;
+   
+         background-color: darken($color, 5);
+         border-radius: 5px;
+   
+         opacity: 0;
+         transition: opacity 250ms;
+      }
+   
+      &::before {
+         content: "";
+         position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 0;  
+         left: 0;
+         z-index: -2;
+   
+         background-color: lighten($color, 15);
+         border-radius: 5px;
+   
+         opacity: 0;
+         transition: opacity 250ms;
+      }
+   
+      img {
+         vertical-align: sub;
+      }
+   
+      &:disabled {
+         cursor: not-allowed;
+   
+         &:active,
+         &:hover {
+            &::before {
+               opacity: 0;
+            }
+      
+            &::after {
+               opacity: 0;
+            }
+         }
+      }
+   }
+}
+
+
+@mixin round-open($delay) {
+   animation: round_open 1s ease-in-out $delay backwards;
+}
+
+@mixin line-open($duree, $delay, $origin) {
+   animation: line_open $duree ease-in-out $delay backwards;
+   transform-origin: $origin;
+}
+
+@mixin midLine-open {
+   animation: midLine_open 1.8s ease-in-out 200ms backwards;
+   transform-origin: top;
+}
+
+@mixin wrapperStacks-open($name) {
+   animation: $name 2s ease-in-out normal backwards;
+   transform-origin: top;
+}
+
+@mixin wrapperStacks-close {
+   animation: wrapperStacks_close .8s ease-in-out reverse forwards;
+}

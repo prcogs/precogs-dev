@@ -22,7 +22,7 @@ footer {
          padding-bottom: 2px;
 
 
-         &:hover {
+         &:hover:not(strong:nth-of-type(3)) {
             background-color: darken($secondary-color, 10);
          }
       }

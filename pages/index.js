@@ -1,5 +1,7 @@
 import Head from 'next/head'
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
+import React from "react" 
+React.useLayoutEffect = React.useEffect 
 
 import Contact from '../components/contact'
 import Footer from '../components/footer'
@@ -12,55 +14,82 @@ import SectionTop from '../components/sectionTop'
 
 export default function Home() {
    const [width, height] = useWindowSize();
-
+   const [view, setView] = useState(false)
+   const [offset, setOffset] = useState(0);
    const [pos, setPos]  = useState({})
 
    const portfolioRef = useRef()
    const prestationRef = useRef()
    const contactRef = useRef()
 
-   useEffect(() => {
-      setPos( {
-         "posPortfolio" : portfolioRef.current?.offsetTop,
-         "posPrestation" : prestationRef.current?.offsetTop,
-         "posContact" : contactRef.current?.offsetTop
-      })
-   },[height])
+   const changeView = () => {
+      if(view) {
+         setTimeout(() => {
+            setView(!view)
+         }, 800)
+      } else {
+         setView(!view)
+      }
+   }
 
-   console.log(pos, height)
+   useEffect(() => {
+      window.onscroll = () => {
+         setOffset(window.pageYOffset)
+      }
+   }, [offset]);
+
+
+   useEffect(() => {
+      const timerPos = setTimeout(() => {
+         setPos( {
+            "posPortfolio" : portfolioRef.current?.offsetTop,
+            "posPrestation" : prestationRef.current?.offsetTop,
+            "posContact" : contactRef.current?.offsetTop,
+         })
+      }, 500)
+
+      return () => clearTimeout(timerPos)
+      
+   },[height, view])
+
    
    return (
-   <div className="home">
-      <Head>
-         <title>Precogs Dev</title>
-         <link rel="icon" href="/favicon.ico" />
-   
-         <link rel="preconnect" href="https://fonts.gstatic.com"/>
-         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet"/>
-      </Head>
+      <div className="home">
+         <Head>
+            <title>Precogs Dev</title>
+            <link rel="icon" href="/favicon.ico" />
+      
+            <link rel="preconnect" href="https://fonts.gstatic.com"/>
+            <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet"/>
+         </Head>
 
-      <Header position={pos} height={height}/>
+         <Header position={pos} 
+                 height={height} 
+                 offset={offset}/>
 
-      <main>
-         <SectionTop/>
+         <main>
+            <SectionTop/>
 
-         <Presentation/>
+            <Presentation changeView={changeView} 
+                        view={view} 
+                        height={height}
+                        offset={offset}/>
 
-         <div ref={portfolioRef} >
-            <Portfolio />
-         </div>
+            <div ref={portfolioRef} >
+               <Portfolio />
+            </div>
 
-         <div ref={prestationRef}>
-            <Prestation width={width}/>
-         </div>
+            <div ref={prestationRef}>
+               <Prestation width={width}/>
+            </div>
 
-         <div ref={contactRef}>
-            <Contact />
-         </div>
-      </main>
+            <div ref={contactRef}>
+               <Contact />
+            </div>
+         </main>
 
-      <Footer/>
-   </div>
+         <Footer/>
+      </div>
    )
 }
 
