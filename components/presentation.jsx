@@ -21,7 +21,7 @@ const Presentation = ({ changeView, view, height, offset }) => {
    return (
       <section className="mid">
          <div className="mid__presentation">
-            <img src="/images/photo_de_profil.jpg"/> 
+            <img src="/images/photo_de_profil.jpg" alt="Photo de profil"/> 
             <div className="container container--presentation">
                <p>Je m’appelle Florian, je suis développeur web Full-stask basé en Yvelines.<br/>
                   Après 4 années universitaires, je décide de changer de cursus afin de pouvoir pleinement m’épanouir. 
@@ -40,19 +40,19 @@ const Presentation = ({ changeView, view, height, offset }) => {
                </p>
                {/* <p>En savoirs plus</p> */}
             </div>
-            <img src="/images/business-5840872_640 1.svg" alt="Homme qui travaille sur un bureau"/>
+            <img src="/images/business-5840872_640_1.svg" alt="Illustration d'un homme qui travaille dans un bureau."/>
          </div>
 
         
 
          <div className="mid__technos">
             <div className="logosTechnos">
-               <div className="logosTechnos__JS"><img src="images/js_color.svg"/></div>
-               <div className="logosTechnos__React"><img src="images/react_color.svg"/></div>
-               <div className="logosTechnos__Redux"><img src="images/redux_color.svg"/></div>
-               <div className="logosTechnos__Php"><img src="images/php_color.svg"/></div>
-               <div className="logosTechnos__Sass"><img src="images/sass_color.svg"/></div>
-               <div className="logosTechnos__NodeJS"><img src="images/nodeJS_color.svg"/></div>
+               <div className="logosTechnos__JS"><img src="images/js_color.svg" alt="Logo JavaScript"/></div>
+               <div className="logosTechnos__React"><img src="images/react_color.svg" alt="Logo React"/></div>
+               <div className="logosTechnos__Redux"><img src="images/redux_color.svg" alt="Logo Redux"/></div>
+               <div className="logosTechnos__Php"><img src="images/php_color.svg" alt="Logo PHP"/></div>
+               <div className="logosTechnos__Sass"><img src="images/sass_color.svg" alt="Logo Sass"/></div>
+               <div className="logosTechnos__NodeJS"><img src="images/nodeJS_color.svg" alt="Logo NodeJS"/></div>
             </div>
             <div className="container container--technos">
                <p className="mid__title mid__title--technos">Mes stacks techniques</p>
@@ -119,16 +119,14 @@ const Presentation = ({ changeView, view, height, offset }) => {
                   </div>
                </div>
             </div>
-            <img className="wrapperStacks__exit" src="images/times-solid 1.svg" alt="Croix" onClick={() => {exit();changeView();}}/>
+            <img className="wrapperStacks__exit" src="images/times-solid_1.svg" alt="Croix" onClick={() => {exit();changeView();}}/>
             </div>
          </div>}
 
          <Infograph height={height} 
                     view={view}
                     offset={offset}/>
-
-         <div id="portfolio"></div>
-
+                    
       </section>
    )
 }

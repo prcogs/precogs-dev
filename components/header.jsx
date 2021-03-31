@@ -34,10 +34,10 @@ const Header = ({ position, height, offset }) => {
    return (
       <header className={"header--" + classHeader} >
          <ul>
-            <a href="#"><li className={active === "accueil" ? "active" : ""}>Accueil</li></a>
-            <a href="#portfolio"> <li className={active === "portfolio" ? "active" : ""}>Portfolio</li></a>
-            <a href="#prestation"><li className={active === "prestation" ? "active" : ""}>Prestations</li></a>
-            <a href="#contact"> <li className={active === "contact" ? "active" : ""}>Contact</li></a>
+            <li className={active === "accueil" ? "active" : ""}><a href="#">Accueil</a></li>
+            <li className={active === "portfolio" ? "active" : ""}><a href="#portfolio"> Portfolio</a></li>
+            <li className={active === "prestation" ? "active" : ""}><a href="#prestation">Prestations</a></li>
+            <li className={active === "contact" ? "active" : ""}><a href="#contact"> Contact</a></li>
          </ul>
       </header>
    )

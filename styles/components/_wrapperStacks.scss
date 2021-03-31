@@ -110,9 +110,9 @@
 
       // @include wrapperStacks-open-close(normal, containerStacks_open-close);
 
-      &--close{
-         // @include wrapperStacks-open-close(reverse, containerStacks_open-close);
-      }
+      // &--close{
+      //    // @include wrapperStacks-open-close(reverse, containerStacks_open-close);
+      // }
 
       @media screen and (max-width:750px) {
          grid-template-columns: auto;
@@ -137,7 +137,7 @@
          &:hover {
             z-index: 3;
 
-            transform: scale(120%);
+            transform: scale(1.2);
             transition: transform .3s ease-in-out;
          }
       }

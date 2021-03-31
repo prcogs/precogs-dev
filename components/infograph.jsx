@@ -26,7 +26,7 @@ const Infograph = ({ height, view, offset }) => {
             <div className="description description--1">
                <h3>Préparation du projet</h3>
                <p>J’étudie vos besoins et votre cahier des charges afin de les traduire en proposition de solutions techniques.</p>
-               <img src="/images/idea-1873540 1.svg" alt="Illustration d'une ampoule" />
+               <img src="/images/idea-1873540_1.svg" alt="Illustration d'une ampoule" />
             </div>
 
             {viewGraph && <div className="line line2"></div>}  
@@ -34,7 +34,7 @@ const Infograph = ({ height, view, offset }) => {
             <div className="description description--2">
                <h3>Phase de devélopement</h3>
                <p>Je procède au développement technique du projet en fonction du cahier des charges.
-                  <img src="/images/laptop-2298286 1.svg" alt="Illustration d'une bureau" />
+                  <img src="/images/laptop-2298286_1.svg" alt="Illustration d'un bureau" />
                </p>
                
             </div>
