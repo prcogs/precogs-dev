@@ -13,7 +13,7 @@ const SectionTop = () => {
 
          <div className="sectionTop__container">
             <div className="sectionTop__containerTexte">
-               <h1>Florian Fort<br/> Devellopeur Full-stack Freelance</h1>
+               <h1>Florian Fort<br/> Développeur Full-stack Freelance</h1>
                <p>Je développe des plateformes, sites web, applications web pour des sartups et des indépendants.</p>
                <button className="btn"><a href="#contact">Contactez-moi</a></button>
                <button className="btn">

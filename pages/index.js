@@ -56,9 +56,30 @@ export default function Home() {
    return (
       <div className="home">
          <Head>
-            <title>Precogs Dev</title>
-            <link rel="icon" href="/favicon.ico" />
-      
+            <meta charSet="utf-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+            <link rel="icon" href="images/favicon.ico" />
+            
+            <title>Florian Fort - Développeur web Full-stack Freelance</title>
+            <meta property= "og:title" content="Florian Fort - Développeur web Full-stack Freelance"/>
+            
+            <meta name="description" content="Je m'appelle Florian, et je suis développeur web Full-stack Freelance. 
+                                              Je développe des plateformes, sites web, applications web pour des sartups et des indépendants."/>
+            <meta property="og:description" content="Je m'appelle Florian, et je suis développeur web Full-stack Freelance. 
+                                                     Je développe des plateformes, sites web, applications web pour des sartups et des indépendants."/>
+            
+            <meta name="robots" content="index"/>
+            <meta name="keywords" content="Florian Fort, développeur web full stack, développeur web front end, développeur web freelance, développeur web Yvelines, développeur web Paris,
+                                           développeur web ReactJS, site web Florian Fort, portfolio Florian Fort, développement site web, développement application web"/>
+            
+            <meta name="author" content="Precogs" />
+            <meta property="og:url" content="https://www.precogsDev.com/"/>
+            {/* <meta property="og:image" content="https://www.precogsDev.com/"/> */}
+
+
+
+
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
             <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet"/>
          </Head>
