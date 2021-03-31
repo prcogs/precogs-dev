@@ -46,6 +46,11 @@ header {
          cursor: pointer;
          opacity: .65;
          transition: opacity 50ms ease-in-out;
+
+         a {
+            display: inline-block;
+            height: 100%;
+         }
       }
 
       .active,

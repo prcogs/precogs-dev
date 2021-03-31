@@ -31,7 +31,7 @@ const Prestation = ({ width }) => {
                
                
                </>}
-               <img src="/images/undraw_File_searching_re_3evy 1.svg" alt="Illustration d'une feuille avec des tasks"/>
+               <img src="/images/undraw_File_searching_re_3evy_1.svg" alt="Illustration d'une feuille avec des tasks"/>
       
          </div>
          <div id="contact"></div>

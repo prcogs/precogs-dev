@@ -10,7 +10,7 @@ const CardProject = ({ img, dev, little_descr, stack}) => {
                 <ul>
                     {stack.map((item, i) => {
                         return (
-                            <li key={i}><div className="imgContainer"><img src={`/images/${item[1]}.svg`}/></div> {item[0]}</li>
+                            <li key={i}><div className="imgContainer"><img src={`/images/${item[1]}.svg`} alt="Screen page d'accueil du projet"/></div> {item[0]}</li>
                         )
                     })}
                 </ul>

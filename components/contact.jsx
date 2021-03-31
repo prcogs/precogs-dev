@@ -78,28 +78,33 @@ const Contact = () => {
          
          <form className="contact__form" id="contact_form" onSubmit={handleSubmit(onSubmit)}>
 
-            <label htmlFor="prenom"/>
-            {/* <img src="/images/user-solid.svg" alt="Logo user"/> */}
-            <input type="text" name="prenom" ref={register} className={`contact__prenom  ${errors.prenom ? "invalid" : ""}`} placeholder="Prénom"></input>
+            <label>
+               {/* <img src="/images/user-solid.svg" alt="Logo user"/> */}
+               <input type="text" name="prenom" ref={register} className={`contact__prenom  ${errors.prenom ? "invalid" : ""}`} placeholder="Prénom"></input>
+            </label>
             {/* {errors.prenom && <span className="inputErrors">{errors.prenom.message}</span>} */}
 
-            <label htmlFor="nom"/>
-            {/* <img src="/images/user-solid.svg" alt="Logo user"/> */}
-            <input type="text" name="nom" ref={register} className={`contact__nom  ${errors.nom ? "invalid" : ""}`} placeholder="Nom"></input><br/>
+            <label>
+               {/* <img src="/images/user-solid.svg" alt="Logo user"/> */}
+               <input type="text" name="nom" ref={register} className={`contact__nom  ${errors.nom ? "invalid" : ""}`} placeholder="Nom"></input><br/>
+            </label>
 
-            <label htmlFor="email"/>
-            {/* <img src="/images/at-solid.svg" alt="Logo email"/> */}
-            <input type="email" name="email" ref={register} className={`contact__email  ${errors.email ? "invalid" : ""}`} placeholder="Email"></input><br/>
+            <label>
+               {/* <img src="/images/at-solid.svg" alt="Logo email"/> */}
+               <input type="email" name="email" ref={register} className={`contact__email  ${errors.email ? "invalid" : ""}`} placeholder="Email"></input><br/>
+            </label>
 
-            <label htmlFor="sujet"/>
-            {/* <img src="/images/comments-solid.svg" alt="Logo bulle message"/> */}
-            <input type="text" name="sujet" ref={register} className={`contact__sujet  ${errors.sujet ? "invalid" : ""}`} placeholder="Sujet"></input><br/>
+            <label>
+               {/* <img   src="/images/comments-solid.svg" alt="Logo bulle message"/> */}
+               <input type="text" name="sujet" ref={register} className={`contact__sujet  ${errors.sujet ? "invalid" : ""}`} placeholder="Sujet"></input><br/>
+            </label>
 
-            <label htmlFor="message"/>
-            {/* <img src="/images/envelope-solid.svg" alt="Logo enveloppe"/> */}
-            <textarea type="text" name="message" ref={register} className={`contact__message  ${errors.message ? "invalid" : ""}`} placeholder="Message"></textarea><br/>
+            <label>
+               {/* <img src="/images/envelope-solid.svg" alt="Logo enveloppe"/> */}
+               <textarea name="message" ref={register} className={`contact__message  ${errors.message ? "invalid" : ""}`} placeholder="Message"></textarea><br/>
+            </label>
 
-            <button disabled={isLoading ? true : false} className="btn contact__btn">{isLoading ? <img src="/images/Dual Ring-1s-40px.svg"/> : "Envoyez" }</button>
+            <button disabled={isLoading ? true : false} className="btn contact__btn">{isLoading ? <img src="/images/Dual_Ring-1s-40px.svg" alt="Spin"/> : "Envoyez" }</button>
          </form>
 
          {modal && <Modal resp={resp} changeView={changeView}/>}
