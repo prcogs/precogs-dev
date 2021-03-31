@@ -1,0 +1,49 @@
+
+
+footer {
+   border-top: 1px solid $text-color;
+   padding-top: 2rem;
+   background: linear-gradient(180deg, #F0F2F5 35.11%, rgba(255, 255, 255, 0) 75.03%), #FFFFFF;
+
+
+   .reseaux {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 15rem;
+
+      margin: auto;
+      margin-bottom: 1.9rem;
+
+      strong {
+         border-radius: 5px;
+         cursor: pointer;
+         padding: 5px;
+         padding-bottom: 2px;
+
+
+         &:hover:not(strong:nth-of-type(3)) {
+            background-color: darken($secondary-color, 10);
+         }
+      }
+
+      img {
+         width: 20px;
+         color: $text-color;
+      }
+   }
+
+   p {
+        text-align: center;
+        line-height: 1.25;
+      
+      i {
+         cursor: pointer;
+
+         &:hover {
+            text-decoration: underline;
+         }
+      
+      }
+   }
+}

@@ -1,0 +1,230 @@
+
+
+// .plusCompetences {
+//    position: relative;
+//    display: flex;
+//    flex-wrap: wrap;
+//    justify-content: space-evenly;
+//    width: 80vw;
+//    max-width: 1424px;
+//    margin: auto;
+//    margin-bottom: 7rem;
+
+//    &__container {
+//       position: relative;
+//       display: flex;
+//       flex-direction: column;
+//       flex-wrap: wrap;
+//       justify-content: center;
+//       align-content: center;
+
+//       background-color: $line-color;
+//       border-radius: 5px;
+//       margin-top: 2rem;
+//       margin-right: .5rem;
+//       margin-bottom: 2rem;
+//       margin-left: .5rem;
+//       padding-top: 10px;
+//       padding-bottom: 10px;
+
+//       border: 2px solid darken($line-color, 30);
+
+//       .title {
+//          position: absolute;
+//          top: -25px;
+
+//          font-size: 1.3rem;
+//          font-weight: bold;
+//       }
+
+//       &--cms,
+//       &--db {
+//          min-height: 6rem;
+//          flex-direction: row;
+//       }
+
+//       div {
+//          display: flex;
+//          justify-content: center;
+//       }
+//    }
+
+//    &__card {
+//       width: max-content;
+//       min-width: 6rem;
+//       height: max-content;
+//       align-self: center;
+
+//       background-color: white;
+//       box-shadow: 7px 8px 5px rgba(0, 0, 0, 0.25);
+//       font-weight: 500;
+//       line-height: 2rem;
+//       margin: 1rem;
+//       padding-left: 10px;
+//       padding-right: 10px;
+//       text-align: center;
+//    }
+
+//    &__exit {
+//       position: absolute;
+//       top: -95px;
+//       right: 10px;
+      
+//       cursor: pointer;
+//    }
+
+// }
+
+
+
+
+
+
+.wrapperStacks {
+   position: relative;
+   // width: 80vw;
+   max-width: 1424px;
+   margin: auto;
+   height: 47rem;
+
+   overflow-y: hidden;
+
+   @include wrapperStacks-open(wrapperStacks_open);
+
+   @media screen and (max-width:750px) {
+      height: 80rem;
+   }
+
+   &--close {
+      @include wrapperStacks-close;
+   }
+
+   
+   &__wrapper {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      justify-content: center;
+
+      padding-top: 4rem;
+
+      // @include wrapperStacks-open-close(normal, containerStacks_open-close);
+
+      &--close{
+         // @include wrapperStacks-open-close(reverse, containerStacks_open-close);
+      }
+
+      @media screen and (max-width:750px) {
+         grid-template-columns: auto;
+      }
+
+   }
+
+   &__container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+
+      padding: 2rem;
+
+      transition: transform .3s ease-in-out;
+
+      
+      @media screen and (min-width:530px) {
+         &:hover {
+            z-index: 3;
+
+            transform: scale(120%);
+            transition: transform .3s ease-in-out;
+         }
+      }
+
+      @media screen and (max-width:530px) {
+         padding: 1.7rem;
+      }
+
+
+
+      .title {
+         font-size: 1.3rem;
+         font-weight: bold;
+         // letter-spacing: .1rem;
+         margin-bottom: 1rem;
+         text-align: center;
+      }
+
+      @media screen and (min-width: 750px) {
+         &--front,
+         &--db {
+            background-color: #f0f2f5;
+         }
+
+         &--back,
+         &--style,
+         &--cms {
+            background-color: $sass-color;
+         }
+      }
+
+      @media screen and (max-width: 749px) {
+         &--front,
+         &--style,
+         &--cms {
+            background-color: #f0f2f5;
+         }
+
+         &--back,
+         &--db {
+            background-color: $sass-color;
+         }
+      }
+
+      
+
+      &--cms,
+      &--db {
+         min-height: 50%;
+      }
+
+      div {
+         display: flex;
+         justify-content: center;
+      }
+   }
+
+   &__card {
+      width: max-content;
+      min-width: 6rem;
+      height: max-content;
+      align-self: center;
+
+      background-color: white;
+      box-shadow: 7px 8px 5px rgba(0, 0, 0, 0.25);
+      font-weight: 500;
+      line-height: 2rem;
+      margin: 1rem;
+      padding-left: 10px;
+      padding-right: 10px;
+      text-align: center;
+
+   }
+
+   &__exit {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+
+      transform: rotate(-180deg);
+      transition: transform 1s ease-in-out;
+      
+      cursor: pointer;
+
+      &:hover {
+         transform: rotate(180deg);
+      }
+   }
+
+}

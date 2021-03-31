@@ -1,0 +1,122 @@
+
+
+.contact {
+
+   background-color: $secondary-color;
+   padding-bottom: 7rem;
+
+
+   h2 {
+      position: relative;
+      z-index: 3;
+      top: -40px;
+      margin-left: 2rem;
+   }
+
+   &__intro {
+      width: 70vw;
+
+      font-size: 1.3rem;
+      text-align: center;
+      margin: auto;
+      margin-top: 3rem;
+      line-height: 1.5;
+
+      @media screen and (max-width:550px) {
+         width: 90vw;
+      }
+   }
+
+   input,
+   textarea {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba($alert-color, 0);
+      transition: all 250ms;
+
+      &:hover {
+         box-shadow: none;
+      }
+
+      
+   }
+
+   .invalid {
+      border: 1px solid rgba($alert-color, 1);
+   }
+
+  
+
+   input {
+      margin-bottom: 1.7rem;
+      padding: 10px;
+      transition: all 250ms;
+
+      &:hover {
+         box-shadow: none;
+      }
+
+      &::placeholder {
+         font-family: $font;
+         text-align: center;
+      }
+   }
+
+
+   &__form {
+      width: 32rem;
+
+      margin: auto;
+      margin-top: 4rem;
+
+      @media screen and (max-width:550px) {
+         width: 90vw;
+         margin: auto;
+         margin-top: 4rem;
+      }
+   }
+
+   &__prenom,
+   &__nom {
+      width: 15rem;
+
+      @media screen and (max-width:550px) {
+         display: block;
+         width: 60%;
+         margin: auto;
+      }
+   }
+
+   &__prenom {
+      margin-right: 2rem;
+
+      @media screen and (max-width:550px) {
+         margin-right: auto;
+      }
+   }
+
+   &__email,
+   &__sujet,
+   &__message {
+      width: 100%;
+   }
+
+   &__message{
+      min-height: 10rem;
+      margin-bottom: 1.5rem;
+      padding: 10px;
+
+      &::placeholder {
+         text-align: center;
+      }
+   }
+
+   &__btn {
+      display: flex;
+      border-radius: 0 !important;
+      line-height: 3 !important;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+
+   }
+}

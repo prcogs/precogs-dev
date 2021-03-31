@@ -1,0 +1,218 @@
+$last-positon: 570px;
+$width-line: 50%;
+
+:root{
+   --width-line: 50%;
+}
+
+$positon-1:0px;
+$positon-2:150px;
+$positon-3:275px;
+$positon-4:425px;
+
+$marg-top-descr:23;
+
+
+.infograph {
+   position: relative;
+   max-width: 605px;
+   height: 35rem;
+
+   margin: auto;
+   margin-top: 5rem;
+   padding-left: 2px;
+   padding-right: 2px;
+
+   &__container {
+
+
+      p:first-child {
+         max-width: 900px;
+         
+         font-size: 1.4rem;
+         margin: auto;
+         margin-top: 9rem;
+         line-height: 1.5;
+         padding-left: 10px;
+         padding-right: 10px;
+         // text-align: center;
+      }
+   }
+
+
+   .midLine {
+      position: absolute;
+      right: 50%;
+      top: 10px;
+      width: 1px;
+      height: $last-positon;
+
+      border-right: 2px dotted $text-color ;
+   }
+
+   .round {
+      position: absolute;
+      right: calc(var(--width-line) - 9px);
+      width: 20px;
+      height: 20px;
+
+      border-radius: 50%;
+   }
+
+   .line {
+      z-index: 2;
+      position: absolute;
+      width: $width-line;
+      height: 3px;
+
+   }
+
+   .line:nth-of-type(2n+1) {
+      left: 50%;
+   }
+
+   .line:nth-of-type(2n) {
+      right: 50%;
+   }
+
+   @include position-round-line($positon-1, 1);
+   
+   @include position-round-line($positon-2, 2);
+
+   @include position-round-line($positon-3, 3);
+
+   @include position-round-line($positon-4, 4);
+
+   @include position-round-line($last-positon, 5);
+   
+
+   .line1,
+   .round1,
+   .round5 {
+      background-color: #6F91DD;
+   }
+
+   .line2,
+   .round2 {
+      background-color: #7CD1B0;
+   }
+
+   .line3,
+   .round3 {
+      background-color: #FDD3CA;
+   }
+
+   .line4,
+   .round4 {
+      background-color: #FF5F24;
+   }
+
+   .description {
+      position: absolute;
+      width: calc(var(--width-line) - 25px);
+
+      @media screen and (max-width: 600px) {
+         img {
+            display: none;
+         }
+      }
+
+      &--1 {
+         top: $positon-1 + $marg-top-descr;
+
+         img {
+            position: absolute;
+            z-index: 1;
+            top: 95px;
+            right: 10px;
+         }
+
+      }
+
+      &--2 {
+         top: $positon-2 + $marg-top-descr;
+
+         img {
+            position: absolute;
+            z-index: 1;
+            top: 33px;
+            right: 10px;
+         }
+      }
+
+      &--3 {
+         top: $positon-3 + $marg-top-descr;
+      }
+
+      &--4 {
+         top: $positon-4 + $marg-top-descr;
+      }
+
+      &--1,
+      &--3 {
+         left: 1.5%;
+      }
+
+      &--2,
+      &--4 {
+         right: 0;
+      }
+
+      h3 {
+         margin-top: 1.1rem;
+         margin-bottom: .7rem;
+      }
+
+      p {
+         z-index: 2;
+         position: relative;
+         line-height: 1.5;
+         
+      }
+   }
+}
+
+
+.startAnimationInfoGraph {
+
+   .round1 {
+      font-size: large;
+      @include round-open(0ms);
+   }
+
+   .round2 {
+      @include round-open(200ms);
+   }
+
+   .round3 {
+      @include round-open(400ms);
+   }
+
+   .round4{
+      @include round-open(600ms);
+   }
+
+   .round5{
+      @include round-open(800ms);
+   }
+
+   .line1 {
+      @include line_open(1s, 100ms, right)
+   }
+
+   .line2 {
+      @include line_open(1s, 300ms, left)
+   }
+
+   .line3 {
+      @include line_open(1s, 500ms, right)
+   }
+
+   .line4 {
+      @include line_open(1s, 600ms, left)
+   }
+
+   .midLine {
+      @include midLine_open
+   }
+}

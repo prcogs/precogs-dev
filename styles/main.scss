@@ -1,0 +1,32 @@
+// Utils
+@import './utils/variables';
+@import './utils/mixins';
+
+// Base
+@import './base/reset';
+@import './base/typographie';
+
+// Animations
+@import './animations/slideDown';
+@import './animations/openInfoGraph';
+@import './animations/openWrapperStacks';
+
+// Components
+@import './components/sectionTop';
+@import './components/mid';
+@import './components/cardProject';
+@import './components/portfolio';
+@import './components/prestation';
+@import './components/contact';
+@import './components/infograph';
+@import './components/wrapperStacks';
+
+// Layout
+@import './layout/buttons';
+@import './layout/footer';
+@import './layout/header';
+@import './layout/modal';
+
+// Pages 
+@import './pages/home';
+@import './pages/mentions_legales';
