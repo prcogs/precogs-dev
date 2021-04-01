@@ -129,7 +129,7 @@ $value-decalage: 3rem;
          right: 15px;
          cursor: pointer;
 
-         color: $link-color;
+         color: darken($php-color, 10);
          opacity: 1;
 
          animation: btn-appear .2s ease-in-out  backwards;

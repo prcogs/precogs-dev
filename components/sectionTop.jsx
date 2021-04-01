@@ -17,7 +17,7 @@ const SectionTop = () => {
                <p>Je développe des plateformes, sites web, applications web pour des sartups et des indépendants.</p>
 
                <a className="btn" href="#contact">Contactez-moi</a>
-               <a className="btn" target="_blank" href="https://stackoverflow.com/">
+               <a className="btn" target="_blank" href="https://www.malt.fr/profile/florianfort">
                   <img src="/images/malt_color.svg" alt="Logo malt"/>
                </a>
                
