@@ -22,7 +22,7 @@ const Footer = () => {
             </strong>
 
             <strong title="Malt - Florian Fort"> 
-                  <a target="_blank" href="https://stackoverflow.com/">
+                  <a target="_blank" href="https://www.malt.fr/profile/florianfort">
                      <img src="/images/malt_picto_color.svg" alt="Logo malt" />
                   </a> 
             </strong>
