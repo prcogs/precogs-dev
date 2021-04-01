@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-SiteMap : https://www.localhost:3000/static/sitemap.xml
+SiteMap : https://www.florianfort-dev.fr/static/sitemap.xml
