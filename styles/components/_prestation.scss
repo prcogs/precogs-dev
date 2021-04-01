@@ -11,9 +11,9 @@
       top: -40px;
       margin-left: 2rem;
 
-      @media screen and (max-width: 380px) {
-         margin-left: 0;
-      }
+      // @media screen and (max-width: 380px) {
+      //    margin-left: 0;
+      // }
    }
 
    &__nav {
@@ -21,6 +21,11 @@
       justify-content: space-evenly;
 
       font-size: 1.5rem;
+
+      @media screen and (max-width:600px) {
+         flex-direction: column;
+         align-items: center;
+      }
       
 
       &--active {
@@ -28,9 +33,16 @@
       }
 
       li {
+         width: 12rem;
+
          border-radius: 15px;
          cursor: pointer;
          padding: 10px;
+         text-align: center;
+
+         @media screen and (max-width:600px) {
+            margin-bottom: 1rem;
+         }
 
          &:hover {
             background-color: darken($secondary-color, 10);

@@ -73,9 +73,9 @@ export default function Home() {
             <meta name="keywords" content="Florian Fort, développeur web full stack, développeur web front end, développeur web freelance, développeur web Yvelines, développeur web Paris,
                                            développeur web ReactJS, site web Florian Fort, portfolio Florian Fort, développement site web, développement application web"/>
             
-            <meta name="author" content="Precogs" />
-            <meta property="og:url" content="https://www.precogsDev.com/"/>
-            {/* <meta property="og:image" content="https://www.precogsDev.com/"/> */}
+            <meta name="author" content="Florian Fort" />
+            <meta property="og:url" content="https://www.florianfort-dev.fr"/>
+            <meta property="og:image" content="https://www.florianfort-dev.fr/undraw_real-time_sync_o57k_1.svg"/>
 
 
 
