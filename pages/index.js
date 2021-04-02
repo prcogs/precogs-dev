@@ -91,7 +91,7 @@ export default function Home() {
             <meta property="og:url" content="https://www.florianfort-dev.fr"/>
             <meta property="og:image" content="https://www.florianfort-dev.fr/undraw_real-time_sync_o57k_1.svg"/>
 
-
+            <meta name="google-site-verification" content="X8azdaoCkKKHDaJ9FPTokeuRFfCUbMWrhQHlfIXYEjM" />
 
 
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
