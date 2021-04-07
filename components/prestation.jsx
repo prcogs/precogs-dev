@@ -48,8 +48,8 @@ const Card_one = () => {
          </div>
          <ul>
             <li>Intégration sur-mesure, responsive design</li>
-            <li>Réfèrecement naturel (balise html, etc...)</li>
-            <li>Déployement personnalisée</li>
+            <li>Référencement naturel (balise html, etc...)</li>
+            <li>Déploiement personnalisé</li>
          </ul>
       </div>
    )
@@ -64,11 +64,11 @@ const Card_two = () => {
          </div>
          <ul>
             <li>Intégration sur-mesure, responsive design</li>
-            <li>Authentification client et payement sécurisée</li>
+            <li>Authentification client et paiement sécurisé</li>
             <li>Dashboard personnalisé, contenu personnalisable</li>
-            <li>Fonctionnalité personnalisées</li>
-            <li>Clean code, respect les bonnes pratiques, minimal</li>
-            <li>Développement d’une API RestFull, lien entre le client et la base de donnée</li>
+            <li>Fonctionnalités personnalisées</li>
+            <li>Clean code, respect des bonnes pratiques</li>
+            <li>Développement d’une API RestFull</li>
          </ul>
       </div>
    )
@@ -83,11 +83,11 @@ const Card_three = () => {
          </div>
          <ul>
             <li>Intégration sur-mesure, responsive design</li>
-            <li>Authentification client et payement sécurisée</li>
-            <li>Fonctionnalité personnalisées</li>
-            <li>Clean code, respect les bonnes pratiques, minimal</li>
+            <li>Authentification client et paiement sécurisée</li>
+            <li>Fonctionnalités personnalisées</li>
+            <li>Clean code, respect des bonnes pratiques</li>
             <li>Optimisation des performances</li>
-            <li>Maitenance du site</li>
+            <li>Maintenance du site</li>
          </ul>
       </div>
    )
