@@ -14,7 +14,7 @@ const SectionTop = () => {
          <div className="sectionTop__container">
             <div className="sectionTop__containerTexte">
                <h1>Florian Fort<br/> Développeur Full-stack Freelance</h1>
-               <p>Je développe des plateformes, sites web, applications web pour des sartups et des indépendants.</p>
+               <p>Je développe des plateformes, sites web, applications web pour des startups et des indépendants.</p>
 
                <a className="btn" href="#contact">Contactez-moi</a>
                <a className="btn" target="_blank" href="https://www.malt.fr/profile/florianfort">

@@ -72,9 +72,11 @@ const Contact = () => {
       <section className="contact">
          <h2>Contact</h2>
          
-         <p className="contact__intro">N’hésitez pas à me contacter ! Pour une demande de devis, 
-            une question ou bien d’autres information, 
-            vous pouvez utilisés le formulaire ci-dessous.</p>
+         <p className="contact__intro">
+            N’hésitez pas à me contacter ! Pour une demande de devis, 
+            une question ou bien d’autres informations, 
+            vous pouvez utiliser le formulaire ci-dessous.
+         </p>
          
          <form className="contact__form" id="contact_form" onSubmit={handleSubmit(onSubmit)}>
 

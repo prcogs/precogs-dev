@@ -50,7 +50,7 @@ const Infograph = ({ height, view, offset }) => {
             {viewGraph && <div className="round round4"></div>}  
             <div className="description description--4">
                <h3>Maintenance</h3>
-               <p>J’assurai la maintenance / support technique du site.</p>
+               <p>J’assurerai la maintenance / support technique du site.</p>
             </div>
 
             {viewGraph && <div className="round round5"></div>}  

@@ -21,11 +21,11 @@ const Presentation = ({ changeView, view, height, offset }) => {
    return (
       <section className="mid">
          <div className="mid__presentation">
-            <img src="/images/photo_de_profil.jpg" alt="Photo de profil"/> 
+            <img src="/images/photo-de-profil-florian.jpg" alt="Photo de profil"/> 
             <div className="container container--presentation">
-               <p>Je m’appelle Florian, je suis développeur web Full-stask basé en Yvelines.<br/>
+               <p>Je m’appelle Florian, je suis développeur web Full-stack basé dans les Yvelines.<br/>
                   Après 4 années universitaires, je décide de changer de cursus afin de pouvoir pleinement m’épanouir. 
-                  Je décide de suivre une formation de développeur web, puis de continuer de me former en autodidacte. 
+                  Je décide donc de suivre une formation de développeur web, puis de continuer de me former en autodidacte. 
                   Passionné par les techniques Web, je mets mes compétences à votre service pour répondre à vos besoins.
                </p>
             </div>
@@ -34,9 +34,9 @@ const Presentation = ({ changeView, view, height, offset }) => {
          <div className="mid__competences">
             <div className="container container--competences">
                <p className="mid__title mid__title--competences">Mes compétences</p>
-               <p>Mon expérience acquise au fil des projets me permet de mieux comprendre les attentes d'un client et de répondre précisément au besoin demandé en fonction du domaine d'activité.<br/>
+               <p>Mes expériences acquises au fil des projets me permet de mieux comprendre les attentes d'un client et de répondre précisément au besoin demandé en fonction du domaine d'activité.<br/>
                   Je propose un accompagnement personnalisé du début jusqu’à la fin de la conception du projet. 
-                  Avec mes capacités d’analyse et vos idées, nous develepperons votre projet le plus efficacement possible.
+                  Avec mes capacités d’analyse et vos idées, nous développerons votre projet le plus efficacement possible.
                </p>
                {/* <p>En savoirs plus</p> */}
             </div>
@@ -56,8 +56,8 @@ const Presentation = ({ changeView, view, height, offset }) => {
             </div>
             <div className="container container--technos">
                <p className="mid__title mid__title--technos">Mes stacks techniques</p>
-               <p>Mes compétences et connaissances des dernières technologies, me permettront de vous offrir un site ou une application performante, qui améliora l’expérience utilisateur et le référencement de votre site sur la toile.
-                  Que ce soit côté front-end ou back-end, je recherche continuellement à me tenir à jour sur les nouveautés et pouvoir proposé les solutions les plus performantes.
+               <p>Mes compétences et connaissances des dernières technologies me permettront de vous offrir un site ou une application performante, qui améliora l’expérience utilisateur et le référencement de votre site sur la toile.
+                  Que ce soit côté front-end ou back-end, je recherche continuellement à me tenir à jour sur les nouveautés et pouvoir proposer les solutions les plus performantes.
                </p>
                {!view && <p onClick={() => {changeView()}}>En savoirs plus</p>}
             </div>
