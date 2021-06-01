@@ -1,9 +1,31 @@
 [
 	{
+		"name" : "Designo",
+		"dev" : "Développement Full-stack",
+		"little_descr" : "Designo est un portfolio et un blog de l'entreprise Designo.",
+		"img":"designo",
+		"url": "https://designo-green.vercel.app/",
+		"stack" : [
+				[
+				"Front-end : NextJS",
+				"react"
+			], [
+				"Back-end : Wordpress",
+				"wordpress"
+			], [
+				"DB : MySQL",
+				"db"
+			], [
+				"Style : Sass",
+				"sass"
+			]
+		]
+	}, {
 		"name" : "shoppingy",
 		"dev" : "Développement Full-stack",
 		"little_descr" : "Shoppingy est un site pour créer ses listes de courses.",
 		"img":"shoppingy",
+		"url": "https://shoppingify.florianf0-project.fr/",
 		"stack" : [
 				[
 				"Front-end : React + Redux",
@@ -26,6 +48,7 @@
 		"dev" : "Développement Front",
 		"little_descr" : "Country Quiz est une application pour tester vos connaissances sur les capitales et les drapeaux d’Europe.",
 		"img":"countryQuiz",
+		"url": "https://country-quiz.florianf0-project.fr/",
 		"stack" : [
 			 	[
 					"Front-end : React",
@@ -45,6 +68,7 @@
 		"dev" : "Développement Front",
 		"little_descr" : "WebBike est une application de réservation de vélo en ligne",
 		"img":"webbike",
+		"url": "https://webbike.florianf0-project.fr/",
 		"stack" : [
 				[
 					"JavaScript",
@@ -67,6 +91,7 @@
 		"dev" : "Développement Front",
 		"little_descr" : "Weather app est une application météo, elle permet de consulter les prévisions météos de nombreuses dans le monde.",
 		"img":"weatherApp",
+		"url": "https://weather-app.florianf0-project.fr/",
 		"stack" : [
 				[
 					"Front-end : React",

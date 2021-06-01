@@ -1,6 +1,6 @@
 
 
-const CardProject = ({ img, dev, little_descr, stack}) => {
+const CardProject = ({ img, dev, little_descr, stack, url}) => {
     return (
         <div className="cardProject">
             <img src={`/images/${img}.jpg`} alt="Screen page d'accueil du projet"/>
@@ -14,7 +14,8 @@ const CardProject = ({ img, dev, little_descr, stack}) => {
                         )
                     })}
                 </ul>
-                <button>Plus d'infos</button>
+                {/* <button>Plus d'infos</button> */}
+                <a href={`${url}`} target="_blank">Voir le site</a>
             </div>
         </div>
     )
