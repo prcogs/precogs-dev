@@ -54,17 +54,22 @@
 
          .imgContainer {
             width: 80px;
-            // margin-right: 2rem;
          }
       }
 
-      button {
+      a {
          display: block;
-         margin: auto;
          margin-top: 2rem;
+         text-align: center;
          text-decoration: underline;
-
       }
+
+      // button {
+      //    display: block;
+      //    margin: auto;
+      //    margin-top: 2rem;
+      //    text-decoration: underline;
+      // }
    }
 
    &:hover {

@@ -31,7 +31,8 @@ const Portfolio = () => {
                                        img={project.img}
                                        dev={project.dev}
                                        little_descr={project.little_descr}
-                                       stack={project.stack}/>
+                                       stack={project.stack}
+                                       url={project.url}/>
                      )
                   })}
                </Carousel>
