@@ -48,7 +48,7 @@
 		"dev" : "Développement Front",
 		"little_descr" : "Country Quiz est une application pour tester vos connaissances sur les capitales et les drapeaux d’Europe.",
 		"img":"countryQuiz",
-		"url": "hhttps://prcogs.github.io/country-quiz-ts/",
+		"url": "https://prcogs.github.io/country-quiz-ts/",
 		"stack" : [
 			 	[
 					"Front-end : React / TS",
