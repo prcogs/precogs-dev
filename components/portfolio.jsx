@@ -1,7 +1,7 @@
 import Carousel from 'react-elastic-carousel'
 import CardProject from "./cardProject"
 
-import projects from '../lib/data_portfolio.json'
+import projects from '../utils/data_portfolio.json'
 import { useState, useLayoutEffect, useEffect, useRef } from 'react'
 
 

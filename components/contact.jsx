@@ -3,7 +3,7 @@ import * as yup from "yup";
 import { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 
-import config from '../lib/config.json';
+import config from '../utils/config.json';
 import Modal from './modal';
 
 const schema = yup.object().shape({
@@ -29,36 +29,34 @@ const Contact = () => {
    const onSubmit = (data, e) => {
       setIsLoading(true);
       fetch(`${config.domaine}/contact`, {
-                                       method: 'POST',
-                                       headers: {
-                                          'Accept': 'application/json',
-                                          'Content-Type': 'application/json'
-                                          },
-                                       body: JSON.stringify({
-                                                      nom : data.nom, 
-                                                      prenom : data.prenom,
-                                                      email : data.email,
-                                                      sujet : data.sujet,
-                                                      message : data.message})
-                                    })
+         method: 'POST',
+         headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+            },
+         body: JSON.stringify({
+            nom : data.nom, 
+            prenom : data.prenom,
+            email : data.email,
+            sujet : data.sujet,
+            message : data.message})
+      })
       .then(res => res.json())
-      .then(
-         (result) => {
-         setResp(JSON.parse(result));
-         setIsLoading(false)
-         setModal(true)
-         
-         if(resp.check === true) {
-            e.target.reset()
-         }
-
+      .then((result) => {
+            setResp(JSON.parse(result));
+            setIsLoading(false)
+            setModal(true)
+            
+            if(resp.check === true) {
+               e.target.reset()
+            }
          },
          (error) => {
-         setError(error);
-         setIsLoading(false)
-         setModal(true)
-         setResp({"check":false, "msg" : "Erreur serveur. Veuillez réessayer dans quelques minutes."})
-         // console.log('Erreur de connexion : ', error)
+            setError(error);
+            setIsLoading(false)
+            setModal(true)
+            setResp({"check":false, "msg" : "Erreur serveur. Veuillez réessayer dans quelques minutes."})
+            // console.log('Erreur de connexion : ', error)
          }
       )
    }
