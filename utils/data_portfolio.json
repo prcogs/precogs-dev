@@ -48,10 +48,10 @@
 		"dev" : "Développement Front",
 		"little_descr" : "Country Quiz est une application pour tester vos connaissances sur les capitales et les drapeaux d’Europe.",
 		"img":"countryQuiz",
-		"url": "https://country-quiz.florianf0-project.fr/",
+		"url": "hhttps://prcogs.github.io/country-quiz-ts/",
 		"stack" : [
 			 	[
-					"Front-end : React",
+					"Front-end : React / TS",
 					"react"
 			],  [
 					"Style : Sass",
@@ -100,7 +100,7 @@
 					"Style : Sass",
 					"sass"
 			], [
-					"API : Metaweather",
+					"API : Openweathermap",
 					"api"
 			]
 		]
