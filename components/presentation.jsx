@@ -59,7 +59,7 @@ const Presentation = ({ changeView, view, height, offset }) => {
                <p>Mes compétences et connaissances des dernières technologies me permettront de vous offrir un site ou une application performante, qui améliora l’expérience utilisateur et le référencement de votre site sur la toile.
                   Que ce soit côté front-end ou back-end, je recherche continuellement à me tenir à jour sur les nouveautés et pouvoir proposer les solutions les plus performantes.
                </p>
-               {!view && <p onClick={() => {changeView()}}>En savoirs plus</p>}
+               {!view && <p onClick={() => {changeView()}}>En savoir plus</p>}
             </div>
          </div>
 
