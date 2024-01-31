@@ -1,4 +1,4 @@
-import Carousel from 'react-elastic-carousel'
+// import Carousel from 'react-elastic-carousel'
 import CardProject from "./cardProject"
 
 import projects from '../utils/data_portfolio.json'
@@ -24,7 +24,7 @@ const Portfolio = () => {
       <section className="portfolio" > 
             <h2>Portfolio</h2>
             <div className="portfolio__cards">
-               <Carousel itemsToShow={numberItems} showArrows={false} itemsToScroll={1}>
+               {/* <Carousel itemsToShow={numberItems} showArrows={false} itemsToScroll={1}> */}
                   {projects.map((project, i) => {
                      return (
                            <CardProject key={i} 
@@ -35,7 +35,7 @@ const Portfolio = () => {
                                        url={project.url}/>
                      )
                   })}
-               </Carousel>
+               {/* </Carousel> */}
             </div>
          <div id="prestation"></div>
       </section>
