@@ -118,9 +118,9 @@ export default function Home() {
                <Prestation width={width}/>
             </div>
 
-            <div ref={contactRef}>
+            {/* <div ref={contactRef}>
                <Contact />
-            </div>
+            </div> */}
          </main>
 
          <Footer/>
