@@ -12,13 +12,24 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Deploy in prod
-        uses: appleboy/ssh-action@master
+      - name: multiple command
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            git pull
-            sh 1_run.sh
+            whoami
+            ls -al
+
+      # - name: Deploy in prod
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: ${{ secrets.HOST }}
+      #     username: ${{ secrets.USERNAME }}
+      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     port: ${{ secrets.PORT }}
+      #     script: |
+      #       git pull
+      #       sh 1_run.sh
