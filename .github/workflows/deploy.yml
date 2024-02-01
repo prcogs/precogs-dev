@@ -20,5 +20,4 @@ jobs:
           script: |
             cd precogs-dev 
             git pull
-            chmod +x 1_run.sh
             sh 1_run.sh
