@@ -19,6 +19,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
-        script: |
-          git pull
-          sh 1_run.sh
+          script: |
+            git pull
+            sh 1_run.sh
