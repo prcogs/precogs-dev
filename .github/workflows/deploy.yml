@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-
       - name: Deploy in prod
         uses: appleboy/ssh-action@master
         with:
@@ -22,4 +20,5 @@ jobs:
           script: |
             cd precogs-dev 
             git pull
+            chmod +x 1_run.sh
             sh 1_run.sh
