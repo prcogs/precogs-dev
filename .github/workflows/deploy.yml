@@ -12,16 +12,23 @@ jobs:
     steps:
       # - uses: actions/checkout@v1
 
-      - name: multiple command
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-            whoami
-            ls -al
+      - name: Display secrets
+        run: |
+          echo "HOST: ${{ secrets.HOST }}"
+          echo "USERNAME: ${{ secrets.USERNAME }}"
+          echo "SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}"
+          echo "PORT: ${{ secrets.PORT }}"
+
+      # - name: multiple command
+      #   uses: appleboy/ssh-action@v1.0.3
+      #   with:
+      #     host: ${{ secrets.HOST }}
+      #     username: ${{ secrets.USERNAME }}
+      #     key: ${{ secrets.KEY }}
+      #     port: ${{ secrets.PORT }}
+      #     script: |
+      #       whoami
+      #       ls -al
 
       # - name: Deploy in prod
       #   uses: appleboy/ssh-action@master
