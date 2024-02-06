@@ -11,7 +11,7 @@ services:
     networks:
       - nginx-proxy
     environment:
-      - VIRTUAL_HOST=florianfort-dev.fr
+      - VIRTUAL_HOST=www.florianfort-dev.fr,florianfort-dev.fr
       - VIRTUAL_PORT=3000
 
 networks:
