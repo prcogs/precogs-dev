@@ -1,20 +1,46 @@
 version: '3'
 
 services:
-  precogs-dev:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: precogs-dev
+  nextjs:
+    build: ./
+
+  nginx:
+    build: ./nginx
+    # ports:
+    #   - 80:80
     expose:
       - 80
     networks:
       - nginx-proxy
     environment:
       - VIRTUAL_HOST=www.florianfort-dev.fr,florianfort-dev.fr
-      - VIRTUAL_PORT=3000
 
 networks:
   nginx-proxy:
     external:
       name: nginx-proxy
+
+
+
+# version: '3'
+
+# services:
+#   precogs-dev:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     container_name: precogs-dev
+#     expose:
+#       - 80
+#     networks:
+#       - nginx-proxy
+#     environment:
+#       - VIRTUAL_HOST=www.florianfort-dev.fr,florianfort-dev.fr
+#       - VIRTUAL_PORT=3000
+
+# networks:
+#   nginx-proxy:
+#     external:
+#       name: nginx-proxy
+
+
