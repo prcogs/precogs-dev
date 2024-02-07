@@ -10,6 +10,8 @@ services:
     container_name: precogs-dev-nginx
     expose:
       - 80
+    depends_on:
+    - nextjs  # Nginx dépend de Next.js
     networks:
       - nginx-proxy
     environment:
