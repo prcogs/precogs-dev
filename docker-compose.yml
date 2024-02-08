@@ -4,7 +4,8 @@ services:
   nextjs:
     build: ./
     container_name: precogs-dev-front
-    ports: 3000:3000
+    ports: 
+      - 3000:3000
 
   nginx:
     build: ./nginx
