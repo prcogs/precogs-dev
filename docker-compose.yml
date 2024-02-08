@@ -12,8 +12,8 @@ services:
     #   - 80
     depends_on:
       - nextjs  # Nginx dépend de Next.js
-    networks:
-      - nginx-proxy
+    # networks:
+    #   - nginx-proxy
     environment:
       - VIRTUAL_HOST=www.florianfort-dev.fr,florianfort-dev.fr
       - VIRTUAL_PORT=80
