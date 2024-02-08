@@ -4,8 +4,6 @@ services:
   nextjs:
     build: ./
     container_name: precogs-dev-front
-    ports: 
-      - 3000:3000
 
   nginx:
     build: ./nginx
@@ -13,7 +11,7 @@ services:
     expose:
       - 80
     depends_on:
-    - nextjs  # Nginx dépend de Next.js
+      - nextjs  # Nginx dépend de Next.js
     networks:
       - nginx-proxy
     environment:
