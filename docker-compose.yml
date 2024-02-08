@@ -14,6 +14,7 @@ services:
       - nextjs  # Nginx dépend de Next.js
     networks:
       - nginx-proxy
+      - internal
     environment:
       - VIRTUAL_HOST=www.florianfort-dev.fr,florianfort-dev.fr
       - VIRTUAL_PORT=80
