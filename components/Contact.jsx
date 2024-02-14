@@ -25,6 +25,7 @@ const Contact = () => {
 
    const onSubmit = (data, e) => {
       setIsLoading(true);
+
       fetch(`${process.env.NEXT_PUBLIC_API}/mail`, {
          method: 'POST',
          headers: {
