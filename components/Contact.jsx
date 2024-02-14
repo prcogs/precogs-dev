@@ -25,12 +25,13 @@ const Contact = () => {
 
    const onSubmit = (data, e) => {
       setIsLoading(true);
+
       fetch(`${process.env.NEXT_PUBLIC_API}/mail`, {
          method: 'POST',
          headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
-            },
+         },
          body: JSON.stringify({
             firstname : data.firstname, 
             lastname : data.lastname,
