@@ -3,7 +3,7 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react
 import React from "react" 
 React.useLayoutEffect = React.useEffect 
 
-import Contact from '../components/contact'
+import Contact from '../components/Contact'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import Portfolio from '../components/portfolio'
@@ -118,9 +118,9 @@ export default function Home() {
                <Prestation width={width}/>
             </div>
 
-            {/* <div ref={contactRef}>
+            <div ref={contactRef}>
                <Contact />
-            </div> */}
+            </div>
          </main>
 
          <Footer/>
