@@ -3,11 +3,11 @@ const Modale = ({ data, handleModale }) => {
       <div className="modale-container" onClick={() => {handleModale()}}>
          <div className="modale">
             <button onClick={() => {handleModale()}}>
-               <i class="ri-close-line"></i>
+               <i className="ri-close-line"></i>
             </button>
 
-            { data.error && <i class="modale-icon--error ri-error-warning-line"/> }
-            { data.success && <i class="modale-icon--success ri-checkbox-circle-line" /> }
+            { data.error && <i className="modale-icon--error ri-error-warning-line"/> }
+            { data.success && <i className="modale-icon--success ri-checkbox-circle-line" /> }
             
             <p>{data.message}</p>
          </div>
