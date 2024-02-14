@@ -1,116 +1,135 @@
-// import { yupResolver } from '@hookform/resolvers/yup';
-// import * as yup from "yup";
-// import { useCallback, useState } from "react";
-// import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+import { useCallback, useState } from "react";
+import { useForm } from "react-hook-form";
 
-// import config from '../utils/config.json';
-// import Modal from './modal';
+import Modale from './Modale';
 
-// const schema = yup.object().shape({
-//    prenom: yup.string().required(),
-//    nom: yup.string().required(),
-//    email: yup.string().email().required(),
-//    sujet: yup.string().required(),
-//    message: yup.string().required(),
-//  });
+const schema = yup.object().shape({
+   firstname: yup.string().required(),
+   lastname: yup.string().required(),
+   email: yup.string().email().required(),
+   subject: yup.string().required(),
+   message: yup.string().required(),
+ });
 
-// const Contact = () => {
-//    const [error, setError] = useState(null);
-//    const [isLoading, setIsLoading] = useState(false);
-//    const [resp, setResp] = useState([]);
-//    const [modal, setModal] = useState(false)
+const Contact = () => {
+   const [isLoading, setIsLoading] = useState(false);
+   const [modale, setModale] = useState({ isOpen: false, success: true, message: null });
 
-//    const { register, handleSubmit, errors, reset } = useForm({
-//       mode: "onTouched",
-//       resolver: yupResolver(schema)
-//    })
+   const { register, handleSubmit, formState: { errors }, reset } = useForm({
+      mode: "onTouched",
+      resolver: yupResolver(schema)
+   })
 
 
-//    const onSubmit = (data, e) => {
-//       setIsLoading(true);
-//       fetch(`${config.domaine}/contact`, {
-//          method: 'POST',
-//          headers: {
-//             'Accept': 'application/json',
-//             'Content-Type': 'application/json'
-//             },
-//          body: JSON.stringify({
-//             nom : data.nom, 
-//             prenom : data.prenom,
-//             email : data.email,
-//             sujet : data.sujet,
-//             message : data.message})
-//       })
-//       .then(res => res.json())
-//       .then((result) => {
-//             setResp(JSON.parse(result));
-//             setIsLoading(false)
-//             setModal(true)
-            
-//             if(resp.check === true) {
-//                e.target.reset()
-//             }
-//          },
-//          (error) => {
-//             setError(error);
-//             setIsLoading(false)
-//             setModal(true)
-//             setResp({"check":false, "msg" : "Erreur serveur. Veuillez réessayer dans quelques minutes."})
-//             // console.log('Erreur de connexion : ', error)
-//          }
-//       )
-//    }
+   const onSubmit = (data, e) => {
+      setIsLoading(true);
+      fetch(`${process.env.NEXT_PUBLIC_API}/mail`, {
+         method: 'POST',
+         headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+            },
+         body: JSON.stringify({
+            firstname : data.firstname, 
+            lastname : data.lastname,
+            email : data.email,
+            subject : data.subject,
+            message : data.message
+         })
+      })
+      .then(response => {
+         if (!response.ok) throw Error(response)
+         if (response.status !== 204) return response.json()
 
-//    const changeView = useCallback(() => {
-//       setModal(false)
-//    },[modal])
+         return response
+      })
+      .then(() => {
+         setModale({ success: true, message : "Votre demande de contact à bien été envoyé.", isOpen: true });
+         e.target.reset()
+      }).catch(() => {
+         setModale({ error: true, message: "Erreur serveur. Veuillez réessayer dans quelques minutes.", isOpen: true })
+      }).finally(() => {
+         setIsLoading(false)
+      })
+   }
 
+   const handleModale = useCallback(() => {
+      setModale({ isOpen: false, message : null })
+   },[modale])
 
-//    return (
-//       <section className="contact">
-//          <h2>Contact</h2>
+   const invalid = (input) => input ? 'invalid' : ''
+
+   return (
+      <section className="contact">
+         <h2>Contact</h2>
          
-//          <p className="contact__intro">
-//             N’hésitez pas à me contacter ! Pour une demande de devis, 
-//             une question ou bien d’autres informations, 
-//             vous pouvez utiliser le formulaire ci-dessous.
-//          </p>
+         <p className="contact__intro">
+            N’hésitez pas à me contacter ! Pour une demande de devis, 
+            une question ou bien d’autres informations, 
+            vous pouvez utiliser le formulaire ci-dessous.
+         </p>
          
-//          <form className="contact__form" id="contact_form" onSubmit={handleSubmit(onSubmit)}>
+         <form className="contact__form" id="contact_form" onSubmit={handleSubmit(onSubmit)}>
+            <label>
+               <input
+                  type="text"
+                  name="firstname"
+                  {...register('firstname')}
+                  className={`contact__firstname ${invalid(errors?.firstname)}`}
+                  placeholder="Prélastname"
+               />
+            </label>
 
-//             <label>
-//                {/* <img src="/images/user-solid.svg" alt="Logo user"/> */}
-//                <input type="text" name="prenom" ref={register} className={`contact__prenom  ${errors.prenom ? "invalid" : ""}`} placeholder="Prénom"></input>
-//             </label>
-//             {/* {errors.prenom && <span className="inputErrors">{errors.prenom.message}</span>} */}
+            <label>
+               <input
+                  type="text"
+                  name="lastname"
+                  {...register('lastname')}
+                  className={`contact__lastname ${invalid(errors?.lastname)}`}
+                  placeholder="Nom"
+               />
+            </label>
 
-//             <label>
-//                {/* <img src="/images/user-solid.svg" alt="Logo user"/> */}
-//                <input type="text" name="nom" ref={register} className={`contact__nom  ${errors.nom ? "invalid" : ""}`} placeholder="Nom"></input><br/>
-//             </label>
+            <label>
+               <input
+                  type="email"
+                  name="email"
+                  {...register('email')}
+                  className={`contact__email ${invalid(errors?.email)}`}
+                  placeholder="Email"
+               />
+            </label>
 
-//             <label>
-//                {/* <img src="/images/at-solid.svg" alt="Logo email"/> */}
-//                <input type="email" name="email" ref={register} className={`contact__email  ${errors.email ? "invalid" : ""}`} placeholder="Email"></input><br/>
-//             </label>
+            <label>
+               <input
+                  type="text"
+                  name="subject"
+                  {...register('subject')}
+                  className={`contact__subject ${invalid(errors?.subject)}`}
+                  placeholder="subject"
+               />
+            </label>
 
-//             <label>
-//                {/* <img   src="/images/comments-solid.svg" alt="Logo bulle message"/> */}
-//                <input type="text" name="sujet" ref={register} className={`contact__sujet  ${errors.sujet ? "invalid" : ""}`} placeholder="Sujet"></input><br/>
-//             </label>
+            <label>
+               <textarea
+                  name="message"
+                  {...register('message')}
+                  className={`contact__message ${invalid(errors?.message)}`}
+                  placeholder="Message"
+               />
+            </label>
 
-//             <label>
-//                {/* <img src="/images/envelope-solid.svg" alt="Logo enveloppe"/> */}
-//                <textarea name="message" ref={register} className={`contact__message  ${errors.message ? "invalid" : ""}`} placeholder="Message"></textarea><br/>
-//             </label>
+            <button disabled={isLoading} className="btn contact__btn">
+               { isLoading ? <img src="/images/Dual_Ring-1s-40px.svg" alt="Spin" /> : "Envoyez" }
+            </button>
+         </form>
 
-//             <button disabled={isLoading ? true : false} className="btn contact__btn">{isLoading ? <img src="/images/Dual_Ring-1s-40px.svg" alt="Spin"/> : "Envoyez" }</button>
-//          </form>
-
-//          {modal && <Modal resp={resp} changeView={changeView}/>}
-//       </section>
-//    )
-// }
+         { modale.isOpen && <Modale data={modale} handleModale={handleModale} /> }
+      </section>
+   )
+}
 
 
-// export default Contact
+export default Contact

@@ -75,8 +75,8 @@
       }
    }
 
-   &__prenom,
-   &__nom {
+   &__firstname,
+   &__lastname {
       width: 15rem;
 
       @media screen and (max-width:550px) {
@@ -86,7 +86,7 @@
       }
    }
 
-   &__prenom {
+   &__firstname {
       margin-right: 2rem;
 
       @media screen and (max-width:550px) {
@@ -95,7 +95,7 @@
    }
 
    &__email,
-   &__sujet,
+   &__subject,
    &__message {
       width: 100%;
    }
