@@ -78,7 +78,7 @@ const Contact = () => {
                   name="firstname"
                   {...register('firstname')}
                   className={`contact__firstname ${invalid(errors?.firstname)}`}
-                  placeholder="Prélastname"
+                  placeholder="Prénom"
                />
             </label>
 
@@ -108,7 +108,7 @@ const Contact = () => {
                   name="subject"
                   {...register('subject')}
                   className={`contact__subject ${invalid(errors?.subject)}`}
-                  placeholder="subject"
+                  placeholder="Sujet"
                />
             </label>
 
