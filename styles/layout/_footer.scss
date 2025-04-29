@@ -5,8 +5,7 @@ footer {
    padding-top: 2rem;
    background: linear-gradient(180deg, #F0F2F5 35.11%, rgba(255, 255, 255, 0) 75.03%), #FFFFFF;
 
-
-   .reseaux {
+   .social {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -21,11 +20,6 @@ footer {
          padding: 5px;
          padding-bottom: 2px;
 
-
-         // &:hover:not(strong:nth-of-type(3)) {
-         //    background-color: darken($secondary-color, 10);
-         // }
-
          &:hover {
             background-color: darken($secondary-color, 10);
          }
@@ -38,9 +32,9 @@ footer {
    }
 
    p {
-        text-align: center;
-        line-height: 1.25;
-      
+      text-align: center;
+      line-height: 1.25;
+   
       i {
          cursor: pointer;
 

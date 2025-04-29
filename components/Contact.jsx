@@ -1,5 +1,5 @@
-import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import { yupResolver } from '@hookform/resolvers/yup';
 import { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -63,14 +63,8 @@ const Contact = () => {
    const invalid = (input) => input ? 'invalid' : ''
 
    return (
-      <section className="contact">
+      <section className="contact" id="contact">
          <h2>Contact</h2>
-         
-         <p className="contact__intro">
-            N’hésitez pas à me contacter ! Pour une demande de devis, 
-            une question ou bien d’autres informations, 
-            vous pouvez utiliser le formulaire ci-dessous.
-         </p>
          
          <form className="contact__form" id="contact_form" onSubmit={handleSubmit(onSubmit)}>
             <label>
@@ -123,7 +117,7 @@ const Contact = () => {
             </label>
 
             <button disabled={isLoading} className="btn contact__btn">
-               { isLoading ? <img src="/images/Dual_Ring-1s-40px.svg" alt="Spin" /> : "Envoyez" }
+               { isLoading ? <img src="/images/others/Dual_Ring-1s-40px.svg" alt="Spin" /> : "Envoyez" }
             </button>
          </form>
 

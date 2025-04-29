@@ -1,5 +1,3 @@
-
-
 .sectionTop {
    position: relative;
    max-width: 100vw;
@@ -9,15 +7,9 @@
    overflow: hidden;
    padding-top: 6rem;
 
-   @media screen and (min-width: $large-screen) {
-      max-height: 50rem;
-   }
-
    @media screen and (max-width: 650px) {
       padding-top: 8rem;
    }
-
-   
 
 
    &__background {
@@ -33,13 +25,13 @@
 
       @media screen and (min-width: $large-screen) {
          top: -35rem;
-         height: 44rem;
+         height: 37rem;
          transform: rotate(-7.25deg) translateX(-3.5rem);
       }
 
       @media screen and (max-width: 812px) {
          top: -37rem;
-         height: 45rem;
+         height: 37rem;
          transform: rotate(-7.25deg) translateX(-3.5rem);
       }
    }

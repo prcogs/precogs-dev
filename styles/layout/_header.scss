@@ -47,7 +47,7 @@ header {
          opacity: .65;
          transition: opacity 50ms ease-in-out;
 
-         a {
+         button {
             display: inline-block;
             height: 100%;
          }
@@ -64,7 +64,6 @@ header {
 }
 
 .header {
-
    &--scroll {
       background-color: rgba($color: $secondary-color, $alpha: 1);
       // transition: all .5ms ease-in-out;

@@ -8,6 +8,7 @@ export default function Custom404() {
       <div className="error404">
          <Head>
             <title>Erreur 404 - Page indisponible</title>
+
             <link rel="icon" href="images/favicon.ico" />
          </Head>
 
@@ -17,7 +18,7 @@ export default function Custom404() {
          <p>Voici un lien qui pourrait vous êtres utiles :</p><br/>
 
          <Link href="/">
-            <a>Page d'accueil</a>
+            Page d'accueil
          </Link>
       </div>
    )

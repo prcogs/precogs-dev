@@ -1,0 +1,173 @@
+[
+	{
+		"name" : "Olympe Application",
+		"dev" : "Développement Front-end",
+		"description" : "Olympe est une application de gestion de compétition.",
+		"img":"projects/olympe/organization.png",
+		"link": "designo",
+		"stack" : [
+				[
+				"Front-end : Vuejs",
+				"vuejs"
+			], [
+				"Style : Sass",
+				"sass"
+			], [
+				"Docker",
+				"docker-1"
+			]
+		]
+	},
+	{
+		"name" : "Olympe Backoffice",
+		"dev" : "Développement Front-end",
+		"description" : "Olympe backoffice est une application permettant de gérer Olympe application.",
+		"img":"projects/olympe/backoffice.png",
+		"link": "designo",
+		"stack" : [
+				[
+				"Front-end : Vuejs",
+				"vuejs"
+			], [
+				"Style : Sass",
+				"sass"
+			], [
+				"Docker",
+				"docker-1"
+			]
+		]
+	},
+	{
+		"name" : "Nodecg interface",
+		"dev" : "Développement Full-stack",
+		"description" : "Gestion d'interface graphique pour stream.",
+		"img":"projects/nodecg/nodecg.png",
+		"link": "designo",
+		"stack" : [
+				[
+				"JavaScript",
+				"js"
+			],  [
+				"Nodejs : Nodecg",
+				"nodeJS"
+			], [
+				"Style : CSS",
+				"css"
+			], [
+				"Docker",
+				"docker-1"
+			]
+		]
+	},
+	{
+		"name" : "Designo",
+		"dev" : "Développement Full-stack",
+		"description" : "Designo est un portfolio et un blog de l'entreprise Designo.",
+		"img":"projects/designo/designo.jpg",
+		"url": "https://designo-green.vercel.app/",
+		"link": "designo",
+		"stack" : [
+				[
+				"Front-end : NextJS",
+				"react"
+			], [
+				"Back-end : Wordpress",
+				"wordpress"
+			], [
+				"DB : MySQL",
+				"db"
+			], [
+				"Style : Sass",
+				"sass"
+			]
+		]
+	}, {
+		"name" : "shoppingy",
+		"dev" : "Développement Full-stack",
+		"description" : "Shoppingy est un site pour créer ses listes de courses.",
+		"img":"projects/shoppingy/shoppingy.jpg",
+		"url": "https://shoppingify.florianf0-project.fr/",
+		"link": "shoppingy",
+		"stack" : [
+				[
+				"Front-end : React + Redux",
+				"react"
+			], [
+				"Back-end : NodeJS + Express",
+				"nodeJS"
+			], [
+				"DB : MongoDB",
+				"db"
+			], [
+				"Style : Sass",
+				"sass"
+			]
+		]
+	},
+
+	{
+		"name" : "country_quiz",
+		"dev" : "Développement Front",
+		"description" : "Country Quiz est une application pour tester vos connaissances sur les capitales et les drapeaux d’Europe.",
+		"img":"projects/country-quiz/countryQuiz.jpg",
+		"url": "https://prcogs.github.io/country-quiz-ts/",
+		"link": "country-quiz",
+		"stack" : [
+			 	[
+					"Front-end : React / TS",
+					"react"
+			],  [
+					"Style : Sass",
+					"sass"
+			], [
+					"API : Restcountries",
+					"api"
+			]
+		]
+   },
+
+    {
+		"name" : "webBike",
+		"dev" : "Développement Front",
+		"description" : "WebBike est une application de réservation de vélo en ligne",
+		"img":"projects/webbike/webbike.jpg",
+		"url": "https://webbike.florianf0-project.fr/",
+		"link": "webbike",
+		"stack" : [
+				[
+					"JavaScript",
+					"js"
+			], [
+					"Style : CSS",
+					"css"
+			], [
+					"API : JCDecaux",
+					"api"
+			], [
+					"Interactive map",
+					"leaflet"
+			]
+		]
+    },     
+    
+    {
+		"name" : "weatherApp",
+		"dev" : "Développement Front",
+		"description" : "Weather app est une application météo, elle permet de consulter les prévisions météos de nombreuses dans le monde.",
+		"img":"projects/weather-app/weatherApp.jpg",
+		"url": "https://weather-app.florianf0-project.fr/",
+		"link": "weather-app",
+		"stack" : [
+				[
+					"Front-end : React",
+					"react"
+			], [
+					"Style : Sass",
+					"sass"
+			], [
+					"API : Openweathermap",
+					"api"
+			]
+		]
+    }
+]
