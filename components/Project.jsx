@@ -4,7 +4,20 @@ const Project = ({ project }) => {
    const { img, dev, description, stack, link } = project
 
    return (
-      <Link href={`/projects/${link}`} className="project">
+      <>
+         { project.link
+            ? <Link href={`/projects/${project.link}`} className="project"><Content project={project} /></Link>
+            : <div className="project"><Content project={project}/></div>
+         }
+      </>
+   )
+}
+
+const Content = ({ project }) => {
+   const { img, dev, description, stack, link } = project
+
+   return (
+      <>
          <img src={`/images/${img}`} alt="Screen page d'accueil du projet"/>
 
          <div className="project-container">
@@ -26,7 +39,7 @@ const Project = ({ project }) => {
                }) }
             </ul>
          </div>
-      </Link>
+      </>
    )
 }
 

@@ -8,7 +8,7 @@ const Portfolio = () => {
          <h2>Portfolio</h2>
 
          <div className="portfolio-projects">
-            { projects.map((project, i) => <Project key={i} project={project} />) }
+            { projects.filter(({ display }) => display).map((project, i) => <Project key={i} project={project} />) }
          </div>
       </section>
    )

@@ -1,10 +1,11 @@
 [
 	{
+		"display": true,
 		"name" : "Olympe Application",
 		"dev" : "Développement Front-end",
-		"description" : "Olympe est une application de gestion de compétition.",
+		"description" : "Plateforme de gestion de tournoi. Elle offre un système de matchmaking, un classement, et des outils pour les joueurs, équipes et organisateurs d’événements.",
 		"img":"projects/olympe/organization.png",
-		"link": "designo",
+		"link": false,
 		"stack" : [
 				[
 				"Front-end : Vuejs",
@@ -19,11 +20,12 @@
 		]
 	},
 	{
+		"display": true,
 		"name" : "Olympe Backoffice",
 		"dev" : "Développement Front-end",
-		"description" : "Olympe backoffice est une application permettant de gérer Olympe application.",
+		"description" : "Backoffice pour gérer l’organisation des tournois, les joueurs et les résultats. Il permet un contrôle complet sur les formats, règles et suivis des matchs.",
 		"img":"projects/olympe/backoffice.png",
-		"link": "designo",
+		"link": false,
 		"stack" : [
 				[
 				"Front-end : Vuejs",
@@ -38,17 +40,18 @@
 		]
 	},
 	{
+		"display": true,
 		"name" : "Nodecg interface",
 		"dev" : "Développement Full-stack",
-		"description" : "Gestion d'interface graphique pour stream.",
+		"description" : "Interface permettant de créer et de gérer des overlays graphiques dynamiques pour les diffusions en direct.",
 		"img":"projects/nodecg/nodecg.png",
-		"link": "designo",
+		"link": false,
 		"stack" : [
 				[
 				"JavaScript",
 				"js"
 			],  [
-				"Nodejs : Nodecg",
+				"Backend : Nodecg",
 				"nodeJS"
 			], [
 				"Style : CSS",
@@ -60,12 +63,53 @@
 		]
 	},
 	{
+		"display": true,
+		"name" : "Cedexio",
+		"dev" : "Développement Full-stack",
+		"description" : "Site vitrine d'une entrepise spécialisée dans l’accompagnement et la transmission de sociétés entre cédants et repreneurs.",
+		"img":"projects/cedexio/cedexio.png",
+		"link": false,
+		"stack" : [
+				[
+				"Front-end: NextJS",
+				"react"
+			],  [
+				"Backend : Strapi",
+				"strapi-1"
+			], [
+				"Style : Sass",
+				"sass"
+			]
+		]
+	},
+	{
+		"display": true,
+		"name" : "E-commerce",
+		"dev" : "Développement Full-stack",
+		"description" : "E-commerce de vente de vêtements de seconde main, et d'une interface d’administration permettant de gérer les articles et le stock.",
+		"img":"projects/le-dressing-de-penny/le-dressing-de-penny.png",
+		"link": false,
+		"stack" : [
+			[
+				"Front-end: NextJS",
+				"react"
+			],  [
+				"Backend : Strapi",
+				"strapi-1"
+			], [
+				"Style : Sass",
+				"sass"
+			]
+		]
+	},
+	{
+		"display": true,
 		"name" : "Designo",
 		"dev" : "Développement Full-stack",
 		"description" : "Designo est un portfolio et un blog de l'entreprise Designo.",
 		"img":"projects/designo/designo.jpg",
 		"url": "https://designo-green.vercel.app/",
-		"link": "designo",
+		"link": false,
 		"stack" : [
 				[
 				"Front-end : NextJS",
@@ -82,12 +126,13 @@
 			]
 		]
 	}, {
+		"display": false,
 		"name" : "shoppingy",
 		"dev" : "Développement Full-stack",
 		"description" : "Shoppingy est un site pour créer ses listes de courses.",
 		"img":"projects/shoppingy/shoppingy.jpg",
 		"url": "https://shoppingify.florianf0-project.fr/",
-		"link": "shoppingy",
+		"link": false,
 		"stack" : [
 				[
 				"Front-end : React + Redux",
@@ -106,12 +151,13 @@
 	},
 
 	{
+		"display": false,
 		"name" : "country_quiz",
 		"dev" : "Développement Front",
 		"description" : "Country Quiz est une application pour tester vos connaissances sur les capitales et les drapeaux d’Europe.",
 		"img":"projects/country-quiz/countryQuiz.jpg",
 		"url": "https://prcogs.github.io/country-quiz-ts/",
-		"link": "country-quiz",
+		"link": false,
 		"stack" : [
 			 	[
 					"Front-end : React / TS",
@@ -125,14 +171,14 @@
 			]
 		]
    },
-
-    {
+   {
+		"display": false,
 		"name" : "webBike",
 		"dev" : "Développement Front",
 		"description" : "WebBike est une application de réservation de vélo en ligne",
 		"img":"projects/webbike/webbike.jpg",
 		"url": "https://webbike.florianf0-project.fr/",
-		"link": "webbike",
+		"link": false,
 		"stack" : [
 				[
 					"JavaScript",
@@ -151,12 +197,13 @@
     },     
     
     {
+		"display": false,
 		"name" : "weatherApp",
 		"dev" : "Développement Front",
 		"description" : "Weather app est une application météo, elle permet de consulter les prévisions météos de nombreuses dans le monde.",
 		"img":"projects/weather-app/weatherApp.jpg",
 		"url": "https://weather-app.florianf0-project.fr/",
-		"link": "weather-app",
+		"link": false,
 		"stack" : [
 				[
 					"Front-end : React",

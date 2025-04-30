@@ -26,9 +26,9 @@ export default function Home() {
       const [size, setSize] = useState([0, 0]);
 
       useLayoutEffect(() => {
-        function updateSize() {
-          setSize([window.innerWidth, window.innerHeight]);
-        }
+         function updateSize() {
+            setSize([window.innerWidth, window.innerHeight]);
+         }
 
         window.addEventListener('resize', updateSize);
 
@@ -58,7 +58,6 @@ export default function Home() {
       
    },[height, view])
 
-   
    return (
       <div className="home">
          <Head>
@@ -81,9 +80,6 @@ export default function Home() {
             <meta property="og:image" content="https://www.florianfort-dev.fr/undraw_real-time_sync_o57k_1.svg"/>
 
             <meta name="google-site-verification" content="X8azdaoCkKKHDaJ9FPTokeuRFfCUbMWrhQHlfIXYEjM" />
-
-            <link rel="preconnect" href="https://fonts.gstatic.com"/>
-            <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" rel="stylesheet"/>
          </Head>
 
          <Header 
