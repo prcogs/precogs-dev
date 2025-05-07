@@ -22,7 +22,6 @@ const Contact = () => {
       resolver: yupResolver(schema)
    })
 
-
    const onSubmit = (data, e) => {
       setIsLoading(true);
 
@@ -47,9 +46,9 @@ const Contact = () => {
          return response
       })
       .then(() => {
-         setModale({ success: true, message : "Votre demande de contact à bien été envoyé.", isOpen: true });
+         setModale({ success: true, message : "Votre demande de contact a bien été envoyée.", isOpen: true });
          e.target.reset()
-      }).catch(() => {
+      }).catch((e) => {
          setModale({ error: true, message: "Erreur serveur. Veuillez réessayer dans quelques minutes.", isOpen: true })
       }).finally(() => {
          setIsLoading(false)
