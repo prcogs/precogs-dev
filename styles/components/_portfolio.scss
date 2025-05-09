@@ -1,25 +1,91 @@
 .portfolio {
-
    padding-bottom: 10rem;
+}
 
-   &__cards {
-      max-width: 100rem;
-      margin: auto;
+.portfolio > h2 {
+   position: relative;
+   top: -22px;
+
+   margin-left: 2rem;
+}
+
+.portfolio-projects {
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   gap: 24px;
+   max-width: 1600px;
+   width: 90vw;
+
+   margin: auto;
+
+   @media screen and (min-width: 700px) {
+      grid-template-columns: repeat(2, 1fr);
    }
 
-   h2 {
-      position: relative;
-      top: -40px;
+   @media screen and (min-width: 1300px) {
+      grid-template-columns: repeat(3, 1fr);
+   }
 
-      margin-left: 2rem;
+   @media screen and (min-width: 1700px) {
+      grid-template-columns: repeat(4, 1fr);
    }
 }
 
-.rec-dot:hover {
-   box-shadow: 0 0 1px 3px $text-color !important;
+.project {
+   border-radius: 10px;
+   background-color: #F0F2F5;
+   border: 1px solid #B5BAC4;
 }
 
-.rec.rec-dot_active {
-   box-shadow: 0 0 1px 3px $text-color !important;
-   background-color: $text-color !important;
+a.project:hover {
+   border: 1px solid #061529;
+   cursor: pointer;
+}
+
+.project > img {
+   width: 100%;
+   height: 165px;
+
+   border-radius: 10px 10px 0 0;
+   object-fit: cover;
+}
+
+.project-container {
+   padding: 17px 40px 10px 25px;
+}
+
+.project-container > p:nth-of-type(1),
+.project-container > p:nth-of-type(2) {
+   padding-left: 15px;
+}
+
+.project-container > p:nth-of-type(1) {
+   font-size: 1.25rem;
+   font-weight: bold;
+}
+
+.project-container > p:nth-of-type(2) {
+   min-height: 64px;
+
+   margin-top: 8px;
+   line-height: 1.3;
+}
+
+.project-container > ul {
+   height: 14rem;
+
+   margin-top: 32px;
+}
+
+.project-container > ul > li {
+   display: flex;
+   align-items: center;
+   height: 40px;
+   text-align: center;
+
+   margin-bottom: 1rem;
+}
+
+.project-container > ul > li > span {
+   width: 80px;
 }

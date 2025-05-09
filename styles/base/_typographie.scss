@@ -1,26 +1,26 @@
-
 // Font
-
 $font-size: 1rem;
-$font:'Nunito', sans-serif;
+$font: 'Nunito', sans-serif;
+
+body {
+   line-height: normal;
+}
 
 // Title
-
 h1 {
    font-size: 2.25rem;
    font-weight: bold;
 }
 
 h2 {
-   font-size: 3.5rem;
+   font-size: 2.375rem;
    font-weight: bold;
 }
 
 h3 {
-   font-size: 1.3rem;
+   font-size: 1.25rem;
    font-weight: bold;
 }
-
 
 a {
    cursor: pointer;

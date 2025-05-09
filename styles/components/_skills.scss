@@ -1,0 +1,40 @@
+.skills {
+   position: relative;
+   background-color: $primary-color;
+   padding-bottom: 120px;
+}
+
+.skills > h2 {
+   position: relative;
+   top: -22px;
+
+   margin-left: 2rem;
+}
+
+.skills > div {
+   display: flex;
+   gap: 24px;
+   flex-wrap: wrap;
+   justify-content: center;
+   max-width: 100rem;
+   margin: auto;
+}
+
+.skill {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+   width: 360px;
+
+   border: 1px solid #061529;
+   padding: 24px;
+}
+
+.skill > div {
+   display: flex;
+   gap: 4px;
+}
+
+.skill > div > span {
+   display: flex;
+}
