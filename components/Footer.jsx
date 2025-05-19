@@ -3,45 +3,38 @@ import Link from 'next/link'
 const Footer = () => {
    return (
       <footer>
-         <div className="social">
-            <strong title="Linkedin - Florian Fort"> 
-               <a target="_blank" href="https://linkedin.com/in/florian-fort-9537421b9">
-                  <img src="/images/social/linkedin_color.svg" alt="Logo linkedin"/>
-               </a> 
-            </strong>
+         <div className="footer-social">
+            <a ittle="Linkedin - Florian Fort" target="_blank" href="https://linkedin.com/in/florian-fort-9537421b9">
+               <img src="/images/social/linkedin_color.svg" alt="Logo linkedin"/>
+            </a> 
 
-            <strong title="GitHub - Prcogs"> 
-               <a target="_blank" href="https://github.com/prcogs">
-                  <img src="/images/social/github_color.svg" alt="Logo github"/>
-               </a> 
-            </strong>
+            <a title="GitHub - Prcogs" target="_blank" href="https://github.com/prcogs">
+               <img src="/images/social/github_color.svg" alt="Logo github"/>
+            </a> 
 
-            <strong title="Gmail - prcogs.contact@gmail.com" onClick={() => { copyEmail() }}> 
-               <img src="/images/social/google_color.svg" alt="Logo google" />
-            </strong>
+            <button title="contact@florianfort-dev.fr" onClick={() => { copyEmail() }}> 
+               <img src="/images/social/email.svg" alt="Logo email" />
+            </button>
 
-            <strong title="Malt - Florian Fort"> 
-               <a target="_blank" href="https://www.malt.fr/profile/florianfort">
-                  <img src="/images/social/malt_picto_color.svg" alt="Logo malt" />
-               </a> 
-            </strong>
+            <a title="Malt - Florian Fort" target="_blank" href="https://www.malt.fr/profile/florianfort">
+               <img src="/images/social/malt_picto_color.svg" alt="Logo malt" />
+            </a> 
          </div>
 
          <p>
             { new Date().getFullYear() } © Florian Fort - Yvelines, FRANCE<br/>
 
-            <i><Link href="/mentions-legales">Mentions légales</Link></i>
+            <Link href="/mentions-legales">Mentions légales</Link>
          </p>
-
       </footer>
    )
 }
 
 
 const copyEmail = () => {
-   navigator.clipboard.writeText("prcogs.contact@gmail.com")
+   navigator.clipboard.writeText("contact@florianfort-dev.fr")
 
-   alert("Email (prcogs.contact@gmail.com) copier dans le presse-papier.")   
+   alert("Email (contact@florianfort-dev.fr) copier dans le presse-papier.")   
 }
 
 export default Footer

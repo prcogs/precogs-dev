@@ -1,47 +1,37 @@
-
-
 footer {
+   background: linear-gradient(180deg, #F0F2F5 35.11%, rgba(255, 255, 255, 0) 75.03%), #FFFFFF;
    border-top: 1px solid $text-color;
    padding-top: 2rem;
-   background: linear-gradient(180deg, #F0F2F5 35.11%, rgba(255, 255, 255, 0) 75.03%), #FFFFFF;
+}
 
-   .social {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      max-width: 15rem;
+.footer-social {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   max-width: 240px;
 
-      margin: auto;
-      margin-bottom: 1.9rem;
+   margin: auto;
+   margin-bottom: 30px;
+}
 
-      strong {
-         border-radius: 5px;
-         cursor: pointer;
-         padding: 5px;
-         padding-bottom: 2px;
+.footer-social > * {
+   display: flex;
+   width: 30px;
+   height: 30px;
 
-         &:hover {
-            background-color: darken($secondary-color, 10);
-         }
-      }
+   border-radius: 4px;
+   padding: 4px;
+}
 
-      img {
-         width: 20px;
-         color: $text-color;
-      }
-   }
+.footer-social > *:hover {
+   background-color: darken($secondary-color, 10);
+}
 
-   p {
-      text-align: center;
-      line-height: 1.25;
-   
-      i {
-         cursor: pointer;
+footer > p {
+   text-align: center;
+   line-height: 1.25;
+}
 
-         &:hover {
-            text-decoration: underline;
-         }
-      
-      }
-   }
+footer > p > a:hover {
+  text-decoration: underline;
 }
